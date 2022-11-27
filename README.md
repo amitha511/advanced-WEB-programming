@@ -1,7 +1,11 @@
-## Homework exercise number 1
+## **Homework exercise number 1 -**
 
-### advanced WEB programming
+### **advanced WEB programming:**<p>
 
-In the project directory, you can run:
+list of books.<p>
+
+By clicking on the book, its information will be displayed
+
+**In the project directory, you can run:**
 
 ### `npm start`
