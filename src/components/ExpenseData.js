@@ -7,8 +7,9 @@ import App from '../App';
 
 function ExpenseData(props) {
     const clickHendler = () => {
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
+       console.log("hi");
+        // const root = ReactDOM.createRoot(document.getElementById('root'));
+        // root.render(<App />);
 
     }
     return (
