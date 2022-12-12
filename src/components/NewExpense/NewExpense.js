@@ -14,7 +14,7 @@ const NewExpense = (props) => {
         };
 
         console.log(ExpenseData);
-        props.onAddExpense(ExpenseData);
+        props.onAddData(ExpenseData);
     }
 
     return (

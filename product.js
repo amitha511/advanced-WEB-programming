@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const productSchema = new mongoose.Schema({
 
     amount: {
-        type: String,
+        type: Number,
         require: true,
         min:0
     },

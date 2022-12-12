@@ -18,7 +18,6 @@ function ExpenseData(props) {
                 <h1>Details:</h1>
                 <div className="expense-item__description "><b>Sold in stores:</b> {props.sold} </div>
                 <div className="expense-item__description "></div>
-                <div className="expense-item__description "> <b>Description:</b>  {props.description} </div>
             </div>
             <ExpenseImg img={props.img}/>
             <button className='button-71' onClick={clickHendler}>back</button>

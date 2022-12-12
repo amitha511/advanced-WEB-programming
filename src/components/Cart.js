@@ -1,33 +1,59 @@
 
-import ExpenseImg from './ExpenseImg';
 import "./ExpenseItem.css";
-import Card from './UI/Card';
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import ExpenseItem from './ExpenseItem';
+import React, { useState, useEffect } from 'react';
 import CartItems from './CartItems'
+import NewExpense from "./NewExpense/NewExpense";
 
 function Cart(props) {
+    const [userName, setEnterdUserNam] = useState("");
+    const [email, setEnterdEmail] = useState("");
 
+    const addExpenseHendler = (data) => {
+        setEnterdUserNam(data.userName);
+        setEnterdEmail(data.email);
+    };
+    
+    const [form, setEnterdForm] = useState(<NewExpense onAddData={addExpenseHendler}></NewExpense>);
 
-    const saveExpenseDataHandler = (items) => {
+    const [content, setContent] = useState(<div>{props.items.map(expense => <CartItems key={expense.id} name={expense.name} amount={expense.amount} img={expense.img}
+         />)}</div>);
+
+    const removeAllCart = (event) => {
+        event.preventDefault();
+        props.items.map(async expense1 => {
+            const expenseData = {
+                userName: userName,
+                email: email,
+                amount: 12,
+                name: expense1.name,
+            }
+            props.onSaveExpenseData(expenseData)
+            setEnterdForm(<p>"done"</p>)
+            setContent(<p>"Thank you for buying!"</p>)
+        });
     }
+    
 
-    console.log(props.items[0])
+
+
+    useEffect(() => {
+        setContent(<div>{props.items.map(expense => <CartItems key={expense.id} name={expense.name} amount={expense.amount} img={expense.img}
+        button={"Remove"} />)}</div>);
+    },[props.items]);
 
     return (
         <div>
-            <label>Cart:</label>
-            <label>Total :{props.bill}</label>
-            <div className='expense-item' >
-            
-                <Card className="expenses">
-                    {props.items.map(expense => <CartItems onSaveExpenseData={saveExpenseDataHandler} key={expense.id} name={expense.name} amount={expense.amount} img={expense.img}
-                        img2={expense.img2} sold={expense.sold} description={expense.description} />)}
-                </Card>
+            <div className='expense-item1' >
+                <div className="expenses1">
+                    <h1>Total :{props.bill}</h1>
+                    <section>{form}</section>
+                    <section>{content} </section>
+                    <button className="button-24" onClick={removeAllCart} >Buy!</button>
+                </div>
             </div>
         </div>
     );
 }
+
 
 export default Cart;

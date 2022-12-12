@@ -5,9 +5,9 @@ const product = require("./product")
 const app = express();
 app.use(cors());
 var bodyParser = require('body-parser');
+const shopping = require('./shopping');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 mongoose.connect("mongodb+srv://pro:DDwiYcBcxZDXEHDR@cluster0.iqfprtk.mongodb.net/books")
   .then(() => {
     console.log('connected to db open');
@@ -22,15 +22,26 @@ mongoose.connect("mongodb+srv://pro:DDwiYcBcxZDXEHDR@cluster0.iqfprtk.mongodb.ne
     console.log("yes");
   });
 
-app.post("/addProduct", (req, res) => {
+app.post("/addProduct",(req, res) => {
+
   console.log("post: "+ req.body)
   var mybook = new product(req.body);
   mybook.save().then(()=>{res.send("ok")})
     .catch(err => {
       res.status(400).send("unable to save to database");
     });
+});
+
+app.post("/addShopping", (req, res) => {
+   console.log("post: "+ req.body)
+  var mybook = new shopping(req.body);
+  mybook.save().then(()=>{res.send("ok")})
+    .catch(err => {
+      res.status(400).send("unable to save to database");
+    });
   
 });
+
 
 
 const port = process.env.PORT || 5000;

@@ -7,6 +7,4 @@ function ExpenseImg(props) {
     </div>
       )
 };
-
-
 export default ExpenseImg;

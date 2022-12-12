@@ -1,12 +1,13 @@
-.expense-item  {
+.expense-item1  {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     padding: 0.5rem;
     margin: 1rem 0;
+
     border-radius: 12px;
-    background-color: #c8abc1;
+    background-color: #f9aba7;
 }
 
 .expense-item__description {
@@ -19,6 +20,9 @@
     flex: 1;
     font-size: larger;
 }
+
+
+
 
 .expense-item h2 {
     color: #3a3a3a;
@@ -96,7 +100,6 @@
     .expense-item__description h2 {
         font-size: 1.25rem;
     }
-    
 
     .expense-item__price {
         font-size: 1.25rem;
@@ -108,4 +111,45 @@
         margin-left: -3%;
         display: flex;
     }
+}
+
+
+
+/* CSS */
+.button-24 {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+
+.button-24:hover,
+.button-24:active {
+    background-color: initial;
+    background-position: 0 0;
+    background-color: #d3cccc;
+        border-color: #f33c3c;
+}
+
+.button-24:active {
+    opacity: .5;
 }

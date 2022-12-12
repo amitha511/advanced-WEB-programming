@@ -3,6 +3,7 @@ import "./ExpenseItem.css";
 import Card from './UI/Card';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import './Cart.css'
 
 
 function CartItems(props) {
@@ -17,16 +18,16 @@ function CartItems(props) {
 
     }
 
-
     return (
         <div className='expense-item'>
             <div>
                 <div className="expense-item__description "> {name}</div>
                 <div className="expense-item__price"> {amount}</div>
-                <button onClick={clickHendler}>remove</button>
-
+                {/* <button onClick={clickHendler}>{ props.button}</button> */}
             </div>
             <ExpenseImg img={img} />
+            
+
         </div>
     );
 }
