@@ -2,7 +2,7 @@
 
 ### **advanced WEB programming:**<p>
 
-list of books.<p>
+book store<p>
 
 By clicking on the book, its information will be displayed
 
