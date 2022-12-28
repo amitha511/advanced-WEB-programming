@@ -21,9 +21,6 @@
     font-size: larger;
 }
 
-
-
-
 .expense-item h2 {
     color: #3a3a3a;
     font-size: 1rem;
@@ -36,7 +33,7 @@
      font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #f1accb;
+    background-color: #92443A;
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px; 
@@ -44,7 +41,7 @@
 
 /* CSS */
 .button-71 {
-    background-color: #0078d0;
+    background-color: #DEBAA1;
     border: 0;
     border-radius: 56px;
     color: #fff;
@@ -117,9 +114,9 @@
 
 /* CSS */
 .button-24 {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #92443A;
+    border: 1px solid #A56546;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
     box-sizing: border-box;
     color: #FFFFFF;
@@ -146,8 +143,8 @@
 .button-24:active {
     background-color: initial;
     background-position: 0 0;
-    background-color: #d3cccc;
-        border-color: #f33c3c;
+    background-color: #F7C9B6;
+        border-color: #A56546;
 }
 
 .button-24:active {

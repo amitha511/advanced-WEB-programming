@@ -1,7 +1,5 @@
 import React from "react";
 
-// import "./modal.scss";
-
 const defaultProps = {
   title: "ModalTitle",
   onClose: () => {}

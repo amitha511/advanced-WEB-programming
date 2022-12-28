@@ -34,8 +34,6 @@ function Cart(props) {
     }
     
 
-
-
     useEffect(() => {
         setContent(<div>{props.items.map(expense => <CartItems key={expense.id} name={expense.name} amount={expense.amount} img={expense.img}
         button={"Remove"} />)}</div>);

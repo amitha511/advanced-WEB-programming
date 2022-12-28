@@ -11,18 +11,6 @@ const productSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    img2:  {
-        type: String,
-        require: true
-    },
-    sold:  {
-        type: String,
-        require: true
-    },
-    description: {
-        type: String,
-        require: true
-    },
     name: {
         type: String,
         require: true

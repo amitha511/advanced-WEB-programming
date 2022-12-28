@@ -4,6 +4,7 @@ import Expenses from "./components/Expenses"
 import React, { useState, useEffect, useCallback } from 'react';
 import Cart from "./components/Cart";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Menu from "./components/UI/Menu";
 
 import MessageBox from "./MessageBox";
 
@@ -86,7 +87,7 @@ const App = () => {
   return (
     <React.Fragment>
       <div>
-        <h2>book store:</h2>
+        <Menu content = {content}></Menu>
         <section>{content}</section>
 
       </div>
